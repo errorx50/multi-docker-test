@@ -9,10 +9,10 @@ script:
   - docker run -e CI=true react-test_v1 npm run test
 
 after_success:
-  - docker build -t ifte-multi-client ./client
-  - docker build -t ifte-multi-nginx ./nginx
-  - docker build -t ifte-multi-server ./server
-  - docker build -t ifte-multi-worker ./worker
+  - docker build -t iftesum50/ifte-multi-client ./client
+  - docker build -t iftesum50/ifte-multi-nginx ./nginx
+  - docker build -t iftesum50/ifte-multi-server ./server
+  - docker build -t iftesum50/ifte-multi-worker ./worker
  
  # docker login and push them images to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
