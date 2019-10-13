@@ -16,9 +16,9 @@ after_success:
  
  # docker login and push them images to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push ifte-multi-client
-  - docker push ifte-multi-nginx
-  - docker push ifte-multi-server
-  - docker push ifte-multi-worker
+  - docker push iftesum50/ifte-multi-client
+  - docker push iftesum50/ifte-multi-nginx
+  - docker push iftesum50/ifte-multi-server
+  - docker push iftesum50/ifte-multi-worker
 
 
